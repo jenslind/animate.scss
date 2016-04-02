@@ -62,6 +62,17 @@ $animate-keyframes: ();
     @else if ($name == 'slideOutLeft') { @include slideOutLeft(); }
     @else if ($name == 'slideOutRight') { @include slideOutRight(); }
     @else if ($name == 'slideOutUp') { @include slideOutUp(); }
+
+    @else if ($name == 'bounceIn') { @include bounceIn(); }
+    @else if ($name == 'bounceInDown') { @include bounceInDown(); }
+    @else if ($name == 'bounceInLeft') { @include bounceInLeft(); }
+    @else if ($name == 'bounceInRight') { @include bounceInRight(); }
+    @else if ($name == 'bounceInUp') { @include bounceInUp(); }
+    @else if ($name == 'bounceOut') { @include bounceOut(); }
+    @else if ($name == 'bounceOutDown') { @include bounceOutDown(); }
+    @else if ($name == 'bounceOutLeft') { @include bounceOutLeft(); }
+    @else if ($name == 'bounceOutRight') { @include bounceOutRight(); }
+    @else if ($name == 'bounceOutUp') { @include bounceOutUp(); }
   }
 }
 
