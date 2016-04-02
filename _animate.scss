@@ -1,0 +1,46 @@
+/**
+ * This is a scss port of the wonderfull https://github.com/daneden/animate.css
+ * Animations: Copyright (c) 2016 Daniel Eden
+ */
+
+@import 'keyframes/fade';
+@import 'keyframes/zooming';
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @if ($name == 'fadeIn') { @include fadeIn(); }
+    @else if ($name == 'fadeInDown') { @include fadeInDown(); }
+    @else if ($name == 'fadeInDownBig') { @include fadeInDownBig(); }
+    @else if ($name == 'fadeInLeft') { @include fadeInLeft(); }
+    @else if ($name == 'fadeInLeftBig') { @include fadeInLeftBig(); }
+    @else if ($name == 'fadeInRight') { @include fadeInRight(); }
+    @else if ($name == 'fadeInRightBig') { @include fadeInRightBig(); }
+    @else if ($name == 'fadeInUp') { @include fadeInUp(); }
+    @else if ($name == 'fadeInUpBig') { @include fadeInUpBig(); }
+    @else if ($name == 'fadeOut') { @include fadeOut(); }
+    @else if ($name == 'fadeOutDown') { @include fadeOutDown(); }
+    @else if ($name == 'fadeOutDownBig') { @include fadeOutDownBig(); }
+    @else if ($name == 'fadeOutLeft') { @include fadeOutLeft(); }
+    @else if ($name == 'fadeOutLeftBig') { @include fadeOutLeftBig(); }
+    @else if ($name == 'fadeOutRight') { @include fadeOutRight(); }
+    @else if ($name == 'fadeOutRightBig') { @include fadeOutRightBig(); }
+    @else if ($name == 'fadeOutUp') { @include fadeOutUp(); }
+    @else if ($name == 'fadeOutUpBig') { @include fadeOutUpBig(); }
+
+    @else if ($name == 'zoomIn') { @include zoomIn(); }
+    @else if ($name == 'zoomInDown') { @include zoomInDown(); }
+    @else if ($name == 'zoomInLeft') { @include zoomInLeft(); }
+    @else if ($name == 'zoomInRight') { @include zoomInRight(); }
+    @else if ($name == 'zoomInUp') { @include zoomInUp(); }
+    @else if ($name == 'zoomOut') { @include zoomOut(); }
+    @else if ($name == 'zoomOutDown') { @include zoomOutDown(); }
+    @else if ($name == 'zoomOutLeft') { @include zoomOutLeft(); }
+    @else if ($name == 'zoomOutRight') { @include zoomOutRight(); }
+    @else if ($name == 'zoomOutUp') { @include zoomOutUp(); }
+  }
+}
+
+@mixin animate($name, $opts: '') {
+  @include keyframes($name);
+  animation: #{$name} #{$opts};
+}
