@@ -8,6 +8,9 @@
 @import 'keyframes/rotate';
 @import 'keyframes/slide';
 
+// Keep track of included keyframes
+$animate-keyframes: ();
+
 @mixin keyframes($name) {
   @keyframes #{$name} {
     @if ($name == 'fadeIn') { @include fadeIn(); }
@@ -63,6 +66,9 @@
 }
 
 @mixin animate($name, $opts: '') {
-  @include keyframes($name);
+  @if not (map-has-key($animate-keyframes, $name)) {
+    @include keyframes($name);
+    $animate-keyframes: map-merge($animate-keyframes, ($name: "")) !global;
+  }
   animation: #{$name} #{$opts};
 }
