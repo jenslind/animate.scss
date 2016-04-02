@@ -1,7 +1,7 @@
 {
   "name": "animate.scss",
   "version": "1.0.0",
-  "description": "",
+  "description": "A SCSS port of daneden's animate.css that doesn't suck.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
