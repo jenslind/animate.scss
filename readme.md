@@ -1,14 +1,16 @@
 # Animate.scss
-> A SCSS port of daneden's animate.css that doesn't suck.
+> A SCSS port of daneden's [animate.css](https://github.com/daneden/animate.css) that doesn't suck.
 
-Port of [animate.css](https://github.com/daneden/animate.css) to scss.
+## Why another one?
+This will add the used animations automagically. No need for a settings file or import
+specific animations.
 
 ## Usage
 ```scss
 @import 'animate';
 
 .element {
-  @include animate('fadeIn', '1s');
+  @include animate('fadeIn', '1s ease-in 2s');
 }
 ```
 
