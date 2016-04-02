@@ -5,6 +5,8 @@
 
 @import 'keyframes/fade';
 @import 'keyframes/zooming';
+@import 'keyframes/rotate';
+@import 'keyframes/slide';
 
 @mixin keyframes($name) {
   @keyframes #{$name} {
@@ -37,6 +39,26 @@
     @else if ($name == 'zoomOutLeft') { @include zoomOutLeft(); }
     @else if ($name == 'zoomOutRight') { @include zoomOutRight(); }
     @else if ($name == 'zoomOutUp') { @include zoomOutUp(); }
+
+    @else if ($name == 'rotateIn') { @include rotateIn(); }
+    @else if ($name == 'rotateInDownLeft') { @include rotateInDownLeft(); }
+    @else if ($name == 'rotateInDownRight') { @include rotateInDownRight(); }
+    @else if ($name == 'rotateInUpLeft') { @include rotateInUpLeft(); }
+    @else if ($name == 'rotateInUpRight') { @include rotateInUpRight(); }
+    @else if ($name == 'rotateOut') { @include rotateOut(); }
+    @else if ($name == 'rotateOutDownLeft') { @include rotateOutDownLeft(); }
+    @else if ($name == 'rotateOutDownRight') { @include rotateOutDownRight(); }
+    @else if ($name == 'rotateOutUpLeft') { @include rotateOutUpLeft(); }
+    @else if ($name == 'rotateOutUpRight') { @include rotateOutUpRight(); }
+
+    @else if ($name == 'slideInDown') { @include slideInDown(); }
+    @else if ($name == 'slideInLeft') { @include slideInLeft(); }
+    @else if ($name == 'slideInRight') { @include slideInRight(); }
+    @else if ($name == 'slideInUp') { @include slideInUp(); }
+    @else if ($name == 'slideOutDown') { @include slideOutDown(); }
+    @else if ($name == 'slideOutLeft') { @include slideOutLeft(); }
+    @else if ($name == 'slideOutRight') { @include slideOutRight(); }
+    @else if ($name == 'slideOutUp') { @include slideOutUp(); }
   }
 }
 
