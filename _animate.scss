@@ -7,6 +7,8 @@
 @import 'keyframes/zooming';
 @import 'keyframes/rotate';
 @import 'keyframes/slide';
+@import 'keyframes/bounce';
+@import 'keyframes/flip';
 
 // Keep track of included keyframes
 $animate-keyframes: ();
@@ -73,6 +75,12 @@ $animate-keyframes: ();
     @else if ($name == 'bounceOutLeft') { @include bounceOutLeft(); }
     @else if ($name == 'bounceOutRight') { @include bounceOutRight(); }
     @else if ($name == 'bounceOutUp') { @include bounceOutUp(); }
+
+    @else if ($name == 'flip') { @include flip(); }
+    @else if ($name == 'flipInX') { @include flipInX(); }
+    @else if ($name == 'flipInY') { @include flipInY(); }
+    @else if ($name == 'flipOutX') { @include flipOutX(); }
+    @else if ($name == 'flipOutY') { @include flipOutY(); }
   }
 }
 
